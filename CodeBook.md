@@ -33,3 +33,20 @@ For more information about what is a "tidy data set" take a look at:
 https://github.com/jukiewiczm/datasharing
 
 ### Transformations of the raw data
+
+Note : for descriptive information about the raw data sets, refer to README.txt and features_info.txt
+files that come with the raw data. 
+Link to raw data http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The following transformations has been performed to the raw data sets:
+* Get rid of unwanted variables in X_test and X_train data sets. The only variables wanted were the ones
+related to the mean or standard deviation of particular measure. These were named as [variable-name]-mean()
+or [variable-name]-std() in the raw data sets, where [variable-name] stands for particular variable name.
+* Join the X_test data set with y_test and subject_test data sets to achieve all the test data in one piece
+* Join the X_train data set with y_train and subject_train data sets for the same reason as above
+* For both of the merged sets above, join the numeric value of Y with their descriptive correspondents
+to obtain descriptive activity names.
+* Assign proper column names to the X_test and X_train data sets. These were taken from the features.txt file.
+* Process the column names to the correct and more readable form (the exact form was described above).
+* Merge the two created data sets to obtain one data set with both the train and the test observations.
+* 
