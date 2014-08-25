@@ -57,6 +57,15 @@ The measure estimators taken from the raw data set are related to mean and stand
 
 The variable names are encoded in following format
 "[domain]_[measure_relate]_[source]_[magnitute]_[jerk]_[estimator]_[axis]_averaged"
+with the following meaning:
+* domain (required) - 'f' for frequency domain, 't' for time domain.
+* measure relate (required) - 'body' for measurements of body, 'gravity' for measurements of gravity.
+* source (required) - 'acc' for accelerometer, 'gyro' for gyroscope
+* magnitute (optional) - if this factor is included in variable name, it means that measure is related to magnitude
+* jerk (optional) - if this factor is included in variable name, it means that measure is related to Jerk signals
+* estimator (required) - 'mean' for mean of particular measure, 'std' for standard deviation
+* axis (required) - the axis of particular measurement, 'X' or 'Y' or 'Z'
+* averaged (required) - to denote that every variable is an average
 
 Each feature vector is a row on the text file.
 
